@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "starship-auth"
+version = "0.1.0"
+description = "Authentication configuration support for the Starship demo application"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name = "Woohyuk Choi"}]
+dependencies = []
+
+[project.urls]
+Documentation = "https://api.starship-auth.com/docs"
+Repository = "https://github.com/cw00h/starship-auth"
+"Service status" = "https://api.starship-auth.com/health"
+
+[project.entry-points."starship.auth"]
+default = "starship_auth:create_config"
+
+[tool.setuptools.packages.find]
+where = ["src"]
